@@ -5,8 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lochness Games — independent game development studio creating atmospheric worlds, memorable stories and games worth getting lost in.">
     <title>Lochness Games</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/hero-art-fix.css">
+    <link rel="stylesheet" href="css/style.css?v=20260819-2">
+    <style>
+        .hero-art {
+            inset: 0 !important;
+            background-image: url('assets/images/hero-nessie.png?v=20260819-2') !important;
+            background-position: center center !important;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            filter: saturate(1.03) contrast(1.01) brightness(1.02) !important;
+        }
+
+        .hero-shade {
+            background:
+                linear-gradient(90deg,
+                    rgba(5,3,10,.90) 0%,
+                    rgba(5,3,10,.76) 20%,
+                    rgba(5,3,10,.38) 39%,
+                    rgba(5,3,10,.08) 58%,
+                    rgba(5,3,10,0) 76%),
+                linear-gradient(180deg,
+                    rgba(5,3,10,.02),
+                    rgba(5,3,10,.08) 65%,
+                    rgba(5,3,10,.36)) !important;
+        }
+
+        .depth-water {
+            background-image:
+                linear-gradient(rgba(12,4,20,.20), rgba(5,3,10,.62)),
+                url('assets/images/hero-nessie.png?v=20260819-2') !important;
+            background-position: center 72% !important;
+        }
+
+        .project-image {
+            background-image:
+                linear-gradient(180deg, rgba(4,2,8,.03), rgba(4,2,8,.22)),
+                url('assets/images/hero-nessie.png?v=20260819-2') !important;
+            background-position: center 62% !important;
+        }
+
+        .contact-bg {
+            background-image:
+                linear-gradient(90deg, rgba(5,3,10,.84), rgba(15,7,24,.36)),
+                url('assets/images/hero-nessie.png?v=20260819-2') !important;
+            background-position: center 68% !important;
+        }
+
+        @media (max-width: 860px) {
+            .hero-art {
+                background-position: 62% center !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
