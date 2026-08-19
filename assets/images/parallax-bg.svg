@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#12091f"/>
+      <stop offset="0.55" stop-color="#23103d"/>
+      <stop offset="1" stop-color="#050307"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="70%" cy="25%" r="55%">
+      <stop offset="0" stop-color="#7c3aed" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#160c24"/>
+      <stop offset="1" stop-color="#030205"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <rect width="1920" height="1080" fill="url(#glow)"/>
+
+  <g opacity="0.7" fill="#26113e">
+    <path d="M0 650L280 330 500 570 720 250 980 590 1230 320 1500 600 1720 360 1920 560V800H0Z"/>
+  </g>
+  <g fill="#110719">
+    <path d="M0 720L240 470 420 640 680 390 930 690 1190 430 1450 670 1640 490 1920 650V820H0Z"/>
+  </g>
+  <g fill="#08040d">
+    <path d="M0 790L260 610 520 750 810 560 1080 760 1370 590 1630 720 1920 600V850H0Z"/>
+  </g>
+
+  <rect y="780" width="1920" height="300" fill="url(#water)"/>
+
+  <g opacity="0.22" stroke="#a78bfa" stroke-width="2">
+    <path d="M0 840C300 805 600 875 920 835S1530 805 1920 850" fill="none"/>
+    <path d="M0 900C330 860 650 930 1010 890S1600 860 1920 910" fill="none"/>
+    <path d="M0 960C280 930 610 995 950 955S1600 925 1920 970" fill="none"/>
+  </g>
+
+  <ellipse cx="1500" cy="275" rx="170" ry="170" fill="#8b5cf6" opacity="0.06"/>
+  <ellipse cx="1500" cy="275" rx="90" ry="90" fill="#c4b5fd" opacity="0.05"/>
+
+  <rect width="1920" height="1080" fill="#000" opacity="0.16"/>
+</svg>
