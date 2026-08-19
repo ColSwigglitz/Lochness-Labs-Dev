@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lochness Games - independent game development studio.">
+    <meta name="description" content="Lochness Games — independent game development studio creating atmospheric worlds, memorable stories and games worth getting lost in.">
     <title>Lochness Games</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/parallax.css">
 </head>
 <body>
     <header class="site-header">
-        <div class="container nav-wrap">
+        <div class="shell nav-wrap">
             <a class="brand" href="#home" aria-label="Lochness Games home">
-                <span class="brand-mark">LG</span>
-                <span class="brand-text">Lochness Games</span>
+                <svg class="brand-icon" viewBox="0 0 64 64" aria-hidden="true">
+                    <path d="M7 49c9 2 15-1 18-8 4-10 1-24 8-31 5-5 14-5 19 0-7-2-12 1-13 7-1 7 5 15 2 23-2 6-8 10-16 11-6 1-12 0-18-2Z"/>
+                    <circle cx="43" cy="11" r="2.2"/>
+                </svg>
+                <span class="brand-copy"><strong>LOCHNESS</strong><small>GAMES</small></span>
             </a>
 
             <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
 
             <nav class="main-nav" aria-label="Main navigation">
+                <a class="active" href="#home">Home</a>
                 <a href="#games">Games</a>
                 <a href="#about">About</a>
+                <a href="#devlog">Devlog</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
@@ -32,106 +34,113 @@
 
     <main>
         <section class="hero" id="home">
-            <div class="hero-glow hero-glow-one"></div>
-            <div class="hero-glow hero-glow-two"></div>
-            <div class="container hero-content">
-                <p class="eyebrow">Independent Game Development Studio</p>
-                <h1>Games from the <span>deep.</span></h1>
-                <p class="hero-copy">
-                    Lochness Games is an independent studio creating bold worlds,
-                    memorable experiences and games we genuinely want to play.
-                </p>
-                <div class="hero-actions">
-                    <a class="button button-primary" href="#games">Explore our games</a>
-                    <a class="button button-secondary" href="#about">Meet the studio</a>
+            <div class="hero-art" aria-hidden="true"></div>
+            <div class="hero-shade" aria-hidden="true"></div>
+            <div class="shell hero-layout">
+                <div class="hero-copy-block">
+                    <p class="eyebrow">Make games. Tell legendary stories.</p>
+                    <h1>We create worlds.<br><span>You live them.</span></h1>
+                    <p class="hero-copy">Lochness Games is an independent studio crafting immersive, atmospheric games with mystery, character and heart.</p>
+                    <a class="button button-primary" href="#games">Explore our games <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+            <a class="scroll-cue" href="#values" aria-label="Scroll to studio values"><span></span></a>
+        </section>
+
+        <section class="values-strip" id="values">
+            <div class="shell values-grid">
+                <article class="value-card">
+                    <div class="value-icon">⌁</div>
+                    <div><h3>Player focused</h3><p>We design games that respect your time and reward curiosity.</p></div>
+                </article>
+                <article class="value-card">
+                    <div class="value-icon">♡</div>
+                    <div><h3>Built with passion</h3><p>A small studio that cares deeply about every world we create.</p></div>
+                </article>
+                <article class="value-card">
+                    <div class="value-icon">◎</div>
+                    <div><h3>Original worlds</h3><p>New stories, new places and adventures with a strong identity.</p></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="depth-banner" aria-label="Studio statement">
+            <div class="depth-water"></div>
+            <div class="shell depth-copy">
+                <p class="eyebrow">Beneath the surface</p>
+                <h2>Something is waiting.</h2>
+            </div>
+        </section>
+
+        <section class="section games-section" id="games">
+            <div class="shell">
+                <div class="section-kicker-row">
+                    <div>
+                        <p class="eyebrow">Our projects</p>
+                        <h2>Games in development</h2>
+                    </div>
+                    <a class="text-link" href="#games">View all projects <span>→</span></a>
+                </div>
+
+                <article class="project-feature">
+                    <div class="project-image" role="img" aria-label="Dark purple loch and Nessie concept artwork"></div>
+                    <div class="project-copy">
+                        <span class="status-pill">In development</span>
+                        <h3>Echoes of the Loch</h3>
+                        <p>A dark adventure game set on the shores of Loch Ness. Uncover old mysteries, brave the unknown and discover what waits beneath the water.</p>
+                        <a class="button button-outline" href="#devlog">Learn more <span aria-hidden="true">→</span></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section about-section" id="about">
+            <div class="shell about-grid">
+                <div class="about-lead">
+                    <p class="eyebrow">About us</p>
+                    <h2>Small studio.<br>Big ambitions.</h2>
+                    <p>Lochness Games was founded to make the kind of games we love to play: atmospheric, distinctive and built around memorable player experiences.</p>
+                    <a class="text-link" href="#contact">More about us <span>→</span></a>
+                </div>
+                <div class="about-panels">
+                    <article><span>01</span><h3>Atmosphere first</h3><p>Strong visual identity, mood and world-building from the first screen.</p></article>
+                    <article><span>02</span><h3>Meaningful systems</h3><p>Gameplay that rewards experimentation, exploration and smart choices.</p></article>
+                    <article><span>03</span><h3>Memorable stories</h3><p>Characters, mysteries and places designed to stay with you.</p></article>
                 </div>
             </div>
         </section>
 
-        <section class="parallax-window" aria-label="Lochness Games atmosphere">
-            <div class="parallax-window-overlay">
-                <div class="container parallax-window-content">
-                    <p class="eyebrow">Beneath the surface</p>
-                    <h2>Something is waiting.</h2>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="games">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow">Our Games</p>
-                    <h2>Something is stirring.</h2>
-                    <p>Our first projects are currently in development. More will surface soon.</p>
-                </div>
-
-                <div class="game-grid">
-                    <article class="game-card game-card-featured">
-                        <div class="game-art">
-                            <span>Project 01</span>
-                        </div>
-                        <div class="game-card-content">
-                            <div class="status-pill">In Development</div>
-                            <h3>Unannounced Project</h3>
-                            <p>
-                                Our first title is taking shape. We will be sharing the name,
-                                world and first details here when it is ready to emerge.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="game-card game-card-placeholder">
-                        <div class="game-card-content">
-                            <div class="plus-icon">+</div>
-                            <h3>More to come</h3>
-                            <p>Future projects, prototypes and experiments will live here.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-alt" id="about">
-            <div class="container about-grid">
+        <section class="section devlog-section" id="devlog">
+            <div class="shell devlog-card">
                 <div>
-                    <p class="eyebrow">About Lochness Games</p>
-                    <h2>Small studio. Big ideas.</h2>
+                    <p class="eyebrow">Devlog</p>
+                    <h2>Follow what we're building.</h2>
+                    <p>Development notes, screenshots, experiments and project updates will appear here as the studio grows.</p>
                 </div>
-                <div class="about-copy">
-                    <p>
-                        Lochness Games is a new independent game development company focused on
-                        building distinctive games with strong identity, satisfying systems and
-                        worlds worth getting lost in.
-                    </p>
-                    <p>
-                        We are at the beginning of the journey. This site will grow alongside the
-                        studio, with development updates, project announcements and behind-the-scenes
-                        looks at what we are building.
-                    </p>
-                </div>
+                <div class="devlog-mark" aria-hidden="true">LG</div>
             </div>
         </section>
 
-        <section class="section contact-section" id="contact">
-            <div class="container contact-card">
-                <p class="eyebrow">Contact</p>
-                <h2>Want to talk?</h2>
-                <p>
-                    We are still getting things set up. Contact details and social channels will
-                    appear here soon.
-                </p>
-                <a class="button button-primary" href="mailto:hello@lochnessgames.com">hello@lochnessgames.com</a>
+        <section class="contact-section" id="contact">
+            <div class="contact-bg" aria-hidden="true"></div>
+            <div class="shell contact-grid">
+                <div class="contact-brand">
+                    <svg class="brand-icon large" viewBox="0 0 64 64" aria-hidden="true"><path d="M7 49c9 2 15-1 18-8 4-10 1-24 8-31 5-5 14-5 19 0-7-2-12 1-13 7-1 7 5 15 2 23-2 6-8 10-16 11-6 1-12 0-18-2Z"/><circle cx="43" cy="11" r="2.2"/></svg>
+                    <div><strong>LOCHNESS</strong><small>GAMES</small></div>
+                </div>
+                <div class="contact-cta">
+                    <p class="eyebrow">Get in touch</p>
+                    <h2>We'd love to hear from you.</h2>
+                    <a class="button button-primary" href="mailto:hello@lochnessgames.com">Contact us <span aria-hidden="true">→</span></a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-wrap">
-            <div class="brand footer-brand">
-                <span class="brand-mark">LG</span>
-                <span class="brand-text">Lochness Games</span>
-            </div>
+        <div class="shell footer-wrap">
             <p>&copy; <span id="year"></span> Lochness Games. All rights reserved.</p>
+            <div class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
         </div>
     </footer>
 
