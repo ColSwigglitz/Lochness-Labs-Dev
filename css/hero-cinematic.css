@@ -1,0 +1,60 @@
+.hero-art {
+    inset: 0 0 0 28%;
+    background-image: url('../assets/images/hero-cinematic.svg');
+    background-position: 58% center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: saturate(1.12) contrast(1.03) brightness(1.08);
+}
+
+.hero-shade {
+    background:
+        linear-gradient(90deg,
+            #05030a 0%,
+            rgba(5,3,10,.93) 20%,
+            rgba(5,3,10,.62) 39%,
+            rgba(5,3,10,.20) 62%,
+            rgba(5,3,10,.04) 82%),
+        linear-gradient(180deg,
+            rgba(5,3,10,.02),
+            rgba(5,3,10,.22) 72%,
+            rgba(5,3,10,.58));
+}
+
+.depth-water {
+    background:
+        linear-gradient(rgba(12,4,20,.34), rgba(5,3,10,.72)),
+        url('../assets/images/hero-cinematic.svg') center 72% / cover fixed;
+    filter: saturate(1.05) brightness(.82);
+}
+
+.project-image {
+    background:
+        linear-gradient(180deg, rgba(4,2,8,.05), rgba(4,2,8,.28)),
+        url('../assets/images/hero-cinematic.svg') 37% 63% / cover no-repeat;
+}
+
+.contact-bg {
+    background:
+        linear-gradient(90deg, rgba(5,3,10,.90), rgba(15,7,24,.48)),
+        url('../assets/images/hero-cinematic.svg') center 70% / cover no-repeat;
+    filter: brightness(.72) saturate(1.08);
+}
+
+@media (max-width: 860px) {
+    .hero-art {
+        inset: 0;
+        background-position: 65% center;
+        filter: saturate(1.08) brightness(.95);
+    }
+
+    .hero-shade {
+        background:
+            linear-gradient(90deg, rgba(5,3,10,.92), rgba(5,3,10,.68) 58%, rgba(5,3,10,.24)),
+            linear-gradient(180deg, rgba(5,3,10,.08), rgba(5,3,10,.58));
+    }
+
+    .depth-water {
+        background-attachment: scroll;
+    }
+}
