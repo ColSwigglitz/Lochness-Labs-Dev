@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#13071f"/>
+      <stop offset="0.45" stop-color="#2b1245"/>
+      <stop offset="1" stop-color="#07040b"/>
+    </linearGradient>
+    <radialGradient id="storm" cx="72%" cy="24%" r="48%">
+      <stop offset="0" stop-color="#bb7cff" stop-opacity="0.65"/>
+      <stop offset="0.35" stop-color="#7c3aed" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#13071f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#191025"/>
+      <stop offset="1" stop-color="#020104"/>
+    </linearGradient>
+    <linearGradient id="nessie" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#08060d"/>
+      <stop offset="0.52" stop-color="#171020"/>
+      <stop offset="0.78" stop-color="#35204d"/>
+      <stop offset="1" stop-color="#0a0710"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="18"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <rect width="1920" height="1080" fill="url(#storm)"/>
+
+  <g fill="#120a1c" opacity="0.95">
+    <path d="M0 690L220 470 390 590 610 390 780 560 980 350 1160 560 1380 380 1590 570 1760 430 1920 560V820H0Z"/>
+  </g>
+  <g fill="#09060e">
+    <path d="M0 760L240 610 420 700 660 540 860 720 1120 520 1370 690 1590 560 1920 690V860H0Z"/>
+  </g>
+
+  <g fill="#050308" opacity="0.95">
+    <path d="M340 410h115v150H340z"/>
+    <path d="M315 445h165v24H315z"/>
+    <path d="M355 360h18v65h-18zM421 342h18v83h-18z"/>
+    <path d="M330 410l25-32 25 32zm80 0 22-38 24 38z"/>
+  </g>
+  <g fill="#d59cff" opacity="0.8" filter="url(#glow)">
+    <circle cx="365" cy="463" r="8"/>
+    <circle cx="430" cy="463" r="8"/>
+  </g>
+
+  <rect y="760" width="1920" height="320" fill="url(#water)"/>
+
+  <g fill="none" stroke="#a970ff" stroke-opacity="0.26">
+    <path d="M0 820C240 785 420 845 670 815S1110 785 1360 820 1720 845 1920 818" stroke-width="3"/>
+    <path d="M0 875C270 842 520 900 790 866S1310 842 1540 878 1760 894 1920 870" stroke-width="2"/>
+    <path d="M0 950C300 920 560 970 870 940S1360 914 1650 950 1830 963 1920 946" stroke-width="2"/>
+  </g>
+
+  <ellipse cx="1350" cy="810" rx="300" ry="70" fill="#8b5cf6" opacity="0.12" filter="url(#glow)"/>
+
+  <!-- Nessie body -->
+  <path d="M1240 840
+           C1200 770 1212 680 1268 612
+           C1326 542 1364 474 1354 398
+           C1344 320 1390 244 1476 220
+           C1572 192 1655 234 1680 306
+           C1705 378 1654 428 1580 433
+           C1512 438 1474 404 1462 362
+           C1453 417 1466 470 1500 521
+           C1548 593 1563 672 1544 746
+           C1527 811 1480 850 1415 868
+           C1348 886 1283 879 1240 840Z"
+        fill="url(#nessie)" stroke="#6f42a8" stroke-width="5"/>
+
+  <!-- head silhouette refinement -->
+  <path d="M1454 300C1490 247 1573 237 1638 273C1688 301 1702 344 1669 377C1640 406 1588 408 1543 392C1510 380 1480 360 1457 337Z"
+        fill="#100b17"/>
+  <ellipse cx="1596" cy="310" rx="10" ry="8" fill="#c69cff"/>
+  <circle cx="1597" cy="310" r="3" fill="#120718"/>
+
+  <!-- neck highlights -->
+  <path d="M1436 349C1424 455 1492 534 1508 621C1519 682 1507 738 1468 790" fill="none" stroke="#8f5bc7" stroke-opacity="0.36" stroke-width="8"/>
+  <path d="M1388 390C1379 494 1426 570 1440 650C1450 710 1438 760 1410 810" fill="none" stroke="#c090ff" stroke-opacity="0.15" stroke-width="5"/>
+
+  <!-- drips -->
+  <g stroke="#cda9ff" stroke-opacity="0.38" stroke-width="3">
+    <path d="M1574 395v52"/><path d="M1602 399v35"/><path d="M1538 390v28"/>
+  </g>
+
+  <!-- ripples around creature -->
+  <g fill="none" stroke="#b57cff" stroke-opacity="0.32">
+    <ellipse cx="1410" cy="854" rx="305" ry="54" stroke-width="4"/>
+    <ellipse cx="1410" cy="862" rx="385" ry="74" stroke-width="2"/>
+  </g>
+
+  <g opacity="0.15" fill="#efe5ff" filter="url(#soft)">
+    <ellipse cx="1150" cy="746" rx="420" ry="30"/>
+    <ellipse cx="480" cy="735" rx="360" ry="22"/>
+  </g>
+
+  <rect width="1920" height="1080" fill="#000" opacity="0.12"/>
+</svg>
