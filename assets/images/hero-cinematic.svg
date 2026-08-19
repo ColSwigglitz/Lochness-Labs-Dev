@@ -1,1 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 890" preserveAspectRatio="xMidYMid slice"><image href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHBwgHBgoICAkLCgkLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzAuIB8zODMtNygtLisBCgoKDg0OGxAQGzAlHyUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAeADDA..." x="0" y="0" width="1920" height="890" preserveAspectRatio="xMidYMid slice"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#080713"/><stop offset=".38" stop-color="#19112f"/><stop offset=".7" stop-color="#67316f"/><stop offset="1" stop-color="#e68bb0"/></linearGradient>
+  <radialGradient id="sun" cx="73%" cy="35%" r="34%"><stop offset="0" stop-color="#ffd9d4" stop-opacity=".95"/><stop offset=".17" stop-color="#efa1cf" stop-opacity=".72"/><stop offset=".52" stop-color="#8f4ac7" stop-opacity=".28"/><stop offset="1" stop-color="#34134f" stop-opacity="0"/></radialGradient>
+  <linearGradient id="mountainFar" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#44244f"/><stop offset="1" stop-color="#1b1629"/></linearGradient>
+  <linearGradient id="mountainNear" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#171427"/><stop offset="1" stop-color="#080a13"/></linearGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#171326"/><stop offset=".35" stop-color="#0b0b16"/><stop offset="1" stop-color="#03040a"/></linearGradient>
+  <linearGradient id="reflection" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f0a5cf" stop-opacity=".7"/><stop offset="1" stop-color="#7d4cce" stop-opacity="0"/></linearGradient>
+  <linearGradient id="nessie" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#28273b"/><stop offset=".38" stop-color="#111621"/><stop offset="1" stop-color="#05070d"/></linearGradient>
+  <linearGradient id="nessieLight" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#b26be0" stop-opacity=".8"/><stop offset=".4" stop-color="#7153bb" stop-opacity=".28"/><stop offset="1" stop-color="#1a2030" stop-opacity="0"/></linearGradient>
+  <pattern id="scales" width="30" height="22" patternUnits="userSpaceOnUse"><path d="M0 11 Q7 1 15 11 Q23 1 30 11" fill="none" stroke="#7b6b9f" stroke-opacity=".19" stroke-width="1.7"/><path d="M0 22 Q7 12 15 22 Q23 12 30 22" fill="none" stroke="#3f4765" stroke-opacity=".26" stroke-width="1.4"/></pattern>
+  <filter id="mist"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+</defs>
+<rect width="1920" height="1080" fill="url(#sky)"/>
+<rect width="1920" height="1080" fill="url(#sun)"/>
+<!-- distant clouds -->
+<g fill="#c286c6" opacity=".15" filter="url(#soft)"><path d="M520 180c150-92 304-82 433-14 129-80 287-57 407 18 91-31 199-16 276 39-159-24-286 8-387 63-171-65-339-51-481 18-97-70-178-91-248-124z"/><path d="M720 310c110-60 211-50 303 7 108-52 230-44 339 12-123-3-226 24-313 71-113-45-218-39-329 12-85-42-145-67-211-64 63-25 133-38 211-38z"/></g>
+<!-- far mountains -->
+<path d="M0 610 180 470 330 565 505 394 655 532 824 372 980 529 1132 413 1290 552 1460 410 1630 535 1775 442 1920 558V760H0z" fill="url(#mountainFar)" opacity=".82"/>
+<path d="M0 676 214 520 395 633 585 476 760 632 938 502 1116 645 1315 480 1502 632 1695 520 1920 640V800H0z" fill="url(#mountainNear)"/>
+<!-- castle silhouette -->
+<g fill="#090a12" opacity=".94"><path d="M305 485h182v135H305z"/><path d="M334 414h42v206h-42zM414 435h36v185h-36z"/><path d="m328 414 27-43 27 43zm79 21 25-39 25 39z"/><path d="M287 530h222v90H287z"/></g>
+<g fill="#f0a55e" opacity=".7" filter="url(#glow)"><rect x="348" y="486" width="10" height="18" rx="2"/><rect x="431" y="500" width="9" height="17" rx="2"/><rect x="382" y="550" width="9" height="15" rx="2"/></g>
+<!-- mist -->
+<g fill="#c9b5dd" opacity=".12" filter="url(#mist)"><ellipse cx="480" cy="684" rx="440" ry="62"/><ellipse cx="1110" cy="682" rx="530" ry="70"/><ellipse cx="1640" cy="668" rx="330" ry="55"/></g>
+<!-- water -->
+<rect y="672" width="1920" height="408" fill="url(#water)"/>
+<path d="M1260 674h260l155 406h-520z" fill="url(#reflection)" opacity=".62"/>
+<g fill="none" stroke-linecap="round"><path d="M70 744c210-30 400 20 600-8s390-24 590 7 430-4 610-3" stroke="#8f67b7" stroke-opacity=".24" stroke-width="4"/><path d="M0 808c250-34 470 28 720-3s440-8 650 16 348-4 550-6" stroke="#a16aca" stroke-opacity=".19" stroke-width="3"/><path d="M160 892c210-19 405 23 620-1s420-2 592 13 338-10 472-5" stroke="#d194ce" stroke-opacity=".15" stroke-width="3"/><path d="M900 717c160 21 320 17 470-6" stroke="#f6c2df" stroke-opacity=".3" stroke-width="4"/><path d="M1030 760c170 21 390 19 570-9" stroke="#ef9ed4" stroke-opacity=".28" stroke-width="5"/></g>
+<!-- Nessie body wake -->
+<ellipse cx="1440" cy="805" rx="330" ry="78" fill="#080a11" opacity=".88"/>
+<path d="M1135 816c125-65 260-69 385-33 111 31 213 14 312-13-75 73-186 119-318 118-153 0-278-24-379-72z" fill="#0b0d15"/>
+<!-- neck -->
+<path d="M1440 835c-70-104-94-214-76-326 13-82 57-152 123-213 43-40 62-82 39-119 73 14 121 56 135 118 16 72-23 136-79 196-48 51-69 109-52 176 14 56 44 108 80 160-52 29-107 42-170 8z" fill="url(#nessie)"/>
+<path d="M1441 829c-45-109-50-224-17-330 24-77 71-137 126-190 31-29 54-61 56-100 40 21 63 56 62 101-1 58-38 109-82 158-46 51-66 111-51 180 12 56 37 111 66 159-48 35-101 43-160 22z" fill="url(#scales)" opacity=".9"/>
+<!-- head -->
+<path d="M1502 247c30-75 109-121 196-103 83 18 142 77 148 137 5 48-30 91-92 103-68 13-150-1-214-31-47-23-60-57-38-106z" fill="url(#nessie)"/>
+<path d="M1514 252c32-57 92-92 160-88 63 4 117 38 144 80-43-21-85-27-126-15-55 16-96 51-132 91-26-14-48-33-46-68z" fill="url(#nessieLight)" opacity=".78"/>
+<path d="M1515 252c34-67 101-103 180-95 67 7 122 43 148 94-57-23-113-25-163-3-49 21-85 53-117 93-34-17-62-41-48-89z" fill="url(#scales)" opacity=".72"/>
+<!-- jaw -->
+<path d="M1537 333c76 24 167 27 259 5-43 42-104 55-184 40-41-8-69-22-75-45z" fill="#070910"/>
+<!-- eye -->
+<ellipse cx="1691" cy="222" rx="20" ry="17" fill="#05050b"/><ellipse cx="1695" cy="219" rx="9" ry="10" fill="#d29562" filter="url(#glow)"/><circle cx="1698" cy="216" r="3.2" fill="#fff0d2"/>
+<!-- nostril -->
+<ellipse cx="1810" cy="288" rx="8" ry="5" fill="#020307"/>
+<!-- rim light -->
+<path d="M1517 247c39-80 120-120 200-97 38 11 75 33 96 61-44-24-91-34-137-22-69 18-112 67-143 121-21-14-28-34-16-63z" fill="none" stroke="#d99bdd" stroke-opacity=".65" stroke-width="5" filter="url(#glow)"/>
+<path d="M1450 816c-54-117-62-230-23-342 25-72 70-127 122-177" fill="none" stroke="#9e67c3" stroke-opacity=".36" stroke-width="9" filter="url(#soft)"/>
+<!-- dripping water -->
+<g stroke="#cbb5e7" stroke-opacity=".48" stroke-width="3" stroke-linecap="round"><path d="M1575 362v48"/><path d="M1610 372v66"/><path d="M1660 378v37"/><path d="M1728 374v53"/></g>
+<g fill="#d8c2ed" opacity=".5"><circle cx="1575" cy="416" r="4"/><circle cx="1610" cy="446" r="4"/><circle cx="1660" cy="422" r="3"/><circle cx="1728" cy="434" r="4"/></g>
+<!-- foreground water sparkles -->
+<g fill="#e5b7e9" opacity=".4"><circle cx="1320" cy="861" r="3"/><circle cx="1388" cy="890" r="2"/><circle cx="1470" cy="846" r="4"/><circle cx="1540" cy="906" r="3"/><circle cx="1640" cy="870" r="2"/></g>
+<!-- vignette -->
+<rect width="1920" height="1080" fill="none" stroke="#000" stroke-opacity=".42" stroke-width="110"/>
+<rect width="1920" height="1080" fill="url(#sun)" opacity=".18"/>
+</svg>
