@@ -1,0 +1,21 @@
+.hero-art {
+    background-image: url('../assets/images/hero-nessie.svg') !important;
+}
+
+.depth-water {
+    background-image:
+        linear-gradient(rgba(12,4,20,.46), rgba(5,3,10,.8)),
+        url('../assets/images/hero-nessie.svg') !important;
+}
+
+.project-image {
+    background-image:
+        linear-gradient(180deg, rgba(4,2,8,.1), rgba(4,2,8,.38)),
+        url('../assets/images/hero-nessie.svg') !important;
+}
+
+.contact-bg {
+    background-image:
+        linear-gradient(90deg, rgba(5,3,10,.96), rgba(15,7,24,.75)),
+        url('../assets/images/hero-nessie.svg') !important;
+}
