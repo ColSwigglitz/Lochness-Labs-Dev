@@ -1,0 +1,74 @@
+body {
+    position: relative;
+    background: var(--bg);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background-image:
+        linear-gradient(rgba(5, 2, 10, 0.48), rgba(5, 2, 10, 0.72)),
+        url('../assets/images/parallax-bg.svg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transform: scale(1.03);
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 50% 10%, rgba(139, 92, 246, 0.12), transparent 36rem),
+        linear-gradient(180deg, rgba(7, 5, 11, 0.08), rgba(7, 5, 11, 0.38));
+}
+
+.hero,
+.section,
+.site-footer {
+    position: relative;
+    background: transparent;
+}
+
+.hero {
+    background: linear-gradient(180deg, rgba(7, 5, 11, 0.16), rgba(7, 5, 11, 0.52));
+}
+
+.section:not(.section-alt) {
+    background: rgba(7, 5, 11, 0.58);
+    backdrop-filter: blur(2px);
+}
+
+.section-alt {
+    background: linear-gradient(180deg, rgba(15, 10, 24, 0.82), rgba(9, 6, 14, 0.88));
+    backdrop-filter: blur(3px);
+}
+
+.contact-section {
+    background: rgba(7, 5, 11, 0.44) !important;
+}
+
+.site-footer {
+    background: rgba(7, 5, 11, 0.88);
+    backdrop-filter: blur(8px);
+}
+
+@media (max-width: 780px) {
+    body::before {
+        position: absolute;
+        min-height: 100vh;
+        background-position: 58% top;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body::before {
+        transform: none;
+    }
+}
