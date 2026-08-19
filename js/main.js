@@ -30,35 +30,3 @@ if (heroArt && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     updateParallax();
     window.addEventListener('scroll', updateParallax, { passive: true });
 }
-
-const lightbox = document.getElementById('gallery-lightbox');
-const lightboxImage = lightbox?.querySelector('img');
-const lightboxClose = lightbox?.querySelector('.lightbox-close');
-const galleryItems = document.querySelectorAll('.gallery-item');
-
-function closeGallery() {
-    if (!lightbox) return;
-    lightbox.classList.remove('is-open');
-    lightbox.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    if (lightboxImage) lightboxImage.src = '';
-}
-
-galleryItems.forEach((item) => {
-    item.addEventListener('click', () => {
-        if (!lightbox || !lightboxImage) return;
-        lightboxImage.src = item.dataset.full || item.querySelector('img')?.src || '';
-        lightbox.classList.add('is-open');
-        lightbox.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-        lightboxClose?.focus();
-    });
-});
-
-lightboxClose?.addEventListener('click', closeGallery);
-lightbox?.addEventListener('click', (event) => {
-    if (event.target === lightbox) closeGallery();
-});
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && lightbox?.classList.contains('is-open')) closeGallery();
-});
