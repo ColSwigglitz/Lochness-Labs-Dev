@@ -6,7 +6,7 @@ body {
     position: relative;
     background-color: transparent;
     background-image:
-        linear-gradient(rgba(5, 2, 10, 0.44), rgba(5, 2, 10, 0.68)),
+        linear-gradient(rgba(5, 2, 10, 0.20), rgba(5, 2, 10, 0.36)),
         url('../assets/images/parallax-bg.svg');
     background-size: cover;
     background-position: center center;
@@ -21,37 +21,85 @@ body {
 }
 
 .hero {
-    background: linear-gradient(180deg, rgba(7, 5, 11, 0.10), rgba(7, 5, 11, 0.40));
+    background: linear-gradient(180deg, rgba(7, 5, 11, 0.08), rgba(7, 5, 11, 0.28));
 }
 
 .section:not(.section-alt) {
-    background: rgba(7, 5, 11, 0.42);
+    background: rgba(7, 5, 11, 0.48);
     backdrop-filter: blur(1px);
 }
 
 .section-alt {
-    background: linear-gradient(180deg, rgba(15, 10, 24, 0.70), rgba(9, 6, 14, 0.76));
+    background: linear-gradient(180deg, rgba(15, 10, 24, 0.72), rgba(9, 6, 14, 0.78));
     backdrop-filter: blur(2px);
 }
 
 .contact-section {
-    background: rgba(7, 5, 11, 0.34) !important;
+    background: rgba(7, 5, 11, 0.40) !important;
 }
 
 .site-footer {
-    background: rgba(7, 5, 11, 0.82);
+    background: rgba(7, 5, 11, 0.86);
     backdrop-filter: blur(8px);
 }
 
+.parallax-window {
+    min-height: 420px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    background-image:
+        linear-gradient(rgba(7, 5, 11, 0.18), rgba(7, 5, 11, 0.38)),
+        url('../assets/images/parallax-bg.svg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.parallax-window-overlay {
+    width: 100%;
+    min-height: 420px;
+    display: grid;
+    align-items: end;
+    background: linear-gradient(180deg, rgba(7, 5, 11, 0.02), rgba(7, 5, 11, 0.52));
+}
+
+.parallax-window-content {
+    padding: 4rem 0;
+}
+
+.parallax-window-content h2 {
+    max-width: 760px;
+    margin-bottom: 0;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.65);
+}
+
 @media (max-width: 780px) {
-    body {
+    body,
+    .parallax-window {
         background-attachment: scroll;
+    }
+
+    body {
         background-position: 58% top;
+    }
+
+    .parallax-window {
+        min-height: 320px;
+        background-position: 58% center;
+    }
+
+    .parallax-window-overlay {
+        min-height: 320px;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    body {
+    body,
+    .parallax-window {
         background-attachment: scroll;
     }
 }
