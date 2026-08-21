@@ -22,11 +22,27 @@ if (menuToggle && mainNav) {
     });
 }
 
-if (heroArt && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const desktopParallax = window.matchMedia('(min-width: 901px)');
+
+if (heroArt && !reducedMotion.matches && desktopParallax.matches) {
+    let ticking = false;
+
     const updateParallax = () => {
         const y = Math.min(window.scrollY * 0.12, 75);
         heroArt.style.transform = `translate3d(0, ${y}px, 0) scale(1.04)`;
+        ticking = false;
     };
+
+    const requestParallaxUpdate = () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    };
+
     updateParallax();
-    window.addEventListener('scroll', updateParallax, { passive: true });
+    window.addEventListener('scroll', requestParallaxUpdate, { passive: true });
+} else if (heroArt) {
+    heroArt.style.removeProperty('transform');
 }
