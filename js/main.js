@@ -29,26 +29,36 @@ if (menuToggle && mainNav) {
 const closeGallery = () => {
     if (!galleryLightbox || !galleryLightboxImage) return;
     galleryLightbox.classList.remove('is-open');
-    galleryLightboxImage.removeAttribute('src');
-    galleryLightboxImage.alt = '';
+    document.body.classList.remove('gallery-open');
     document.body.style.removeProperty('overflow');
+    window.setTimeout(() => {
+        if (!galleryLightbox.classList.contains('is-open')) {
+            galleryLightboxImage.removeAttribute('src');
+            galleryLightboxImage.alt = '';
+        }
+    }, 250);
 };
 
 if (galleryLightbox && galleryLightboxImage && galleryItems.length) {
     galleryItems.forEach((item) => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', (event) => {
+            event.preventDefault();
+            event.stopPropagation();
             const sourceImage = item.querySelector('img');
-            const fullImage = item.dataset.full || sourceImage?.src;
+            const fullImage = sourceImage?.currentSrc || sourceImage?.src;
             if (!fullImage) return;
+
             galleryLightboxImage.src = fullImage;
             galleryLightboxImage.alt = sourceImage?.alt || 'Hotwing Hellions artwork';
-            galleryLightbox.classList.add('is-open');
             document.body.style.overflow = 'hidden';
-            galleryLightboxClose?.focus();
+            document.body.classList.add('gallery-open');
+            window.requestAnimationFrame(() => galleryLightbox.classList.add('is-open'));
+            galleryLightboxClose?.focus({ preventScroll: true });
         });
     });
 
     galleryLightboxClose?.addEventListener('click', closeGallery);
+    galleryLightboxImage.addEventListener('click', closeGallery);
     galleryLightbox.addEventListener('click', (event) => {
         if (event.target === galleryLightbox) closeGallery();
     });
